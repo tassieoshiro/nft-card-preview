@@ -1,0 +1,124 @@
+@import "config";
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: $dark-bg;
+  font-family: "Outfit", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  color: $primary-color;
+  font-weight: 300;
+}
+
+.container {
+  padding: 1.5rem;
+  margin: 2rem;
+  background-color: $card-bg;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0.9rem;
+
+  .card {
+    .image {
+      position: relative;
+      // width: 100%;
+      // height: auto;
+      &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+      &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 255, 247, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    h3 {
+      color: $white;
+      font-weight: 600;
+      padding: 0.8rem 0;
+      &:hover {
+        color: $secondary-color;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      padding: 0.4rem 0;
+      line-height: 1.5;
+    }
+
+    .eth-days {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__eth {
+        color: $secondary-color;
+        font-weight: bold;
+        svg {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+
+    .line {
+      content: "";
+      width: 100%;
+      height: 0.1rem;
+      margin: 1rem 0 auto;
+      background-color: $color-line;
+
+      &__description {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding: 1rem 0 0 0;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border: 1px solid $white;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+
+        &--name {
+          color: $white;
+          &:hover {
+            color: $secondary-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// for the attibute
+.attribution {
+  color: $white;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
